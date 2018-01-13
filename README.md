@@ -30,13 +30,13 @@ Install labelImg and then use it to hand-label the 10 daisy images you downloade
 
 Cool, now we have to convert these images+annotations into TRFrecord format since tensorflow only understands this format. The folder structure is very important for the training to work successfully so please follow the structure I'm writing. First create a folder called 'Daisy_TRFrecord'. Inside create a folder called 'images' and another folder called 'annotations'. Inside 'annotations' create another folder called 'xmls'. I know this is very confusing but that's the way these scripts are hard-coded. Paste the 'create_pet_tf_record.py' into 'Daisy_TRFrecord' folder then create a labelmap as seen on my github (link) which should contain the classes you are training. In our case only daisy.
 
-Folder Structure - 
-+Daisy_TRFrecord
- -Daisy_label_map.pbtxt
- -create_pet_tf_record.py
- +images
- +annotations
-  +xmls
+	Folder Structure - 
+	+Daisy_TRFrecord
+	 -Daisy_label_map.pbtxt
+	 -create_pet_tf_record.py
+	 +images
+	 +annotations
+	  +xmls		
  
  
 
@@ -76,22 +76,22 @@ With that done, paste this modified config file in 'Daisy_Train'. Next we need p
 In our case, since we want android model, download the ssd_mobilenet_v1_coco. Inside you will find 3 files called 'model.ckpt.data-00000-of-00001' , 'model.ckpy.index' , 'model.cpt.meta'
 Paste all 3 files into 'Daisy_Train/models/' directory. So our folder structure will finally look like this - 
 
-Folder Structure (where + means a folder and - means not a folder) - 
-+Daisy_Train
- -eval.py
- -train.py
- -export_inference_graph.py
- -Daisy_label_map.pbtxt
- -ssd_mobilenet_v1_pets.config
- +data
-  -pet_train.record
-  -pet_val.record
- +models
-  -model.ckpt.data-00000-of-00001
-  -model.ckpy.index
-  -model.cpt.meta
-  +train
-  +eval
+	Folder Structure (where + means a folder and - means not a folder) - 
+	+Daisy_Train
+	 -eval.py
+	 -train.py
+	 -export_inference_graph.py
+	 -Daisy_label_map.pbtxt
+	 -ssd_mobilenet_v1_pets.config
+	 +data
+	  -pet_train.record
+	  -pet_val.record
+	 +models
+	  -model.ckpt.data-00000-of-00001
+	  -model.ckpy.index
+	  -model.cpt.meta
+	  +train
+	  +eval
  
 
 If you managed to do it exactly like above then congrats, you are nearly done. You can also see the directory structure on my github (link). Now change directory to 'Daisy_Train' and run the following command - 
