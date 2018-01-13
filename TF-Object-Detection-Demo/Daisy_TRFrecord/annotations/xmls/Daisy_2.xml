@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>Daisy_2.jpg</filename>
+	<path>/home/zod-msi/Documents/Github_Daisy_Demo/TF-Object-Detection-Demo/Daisy_TRFrecord/images/Daisy_2.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>240</width>
+		<height>230</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Daisy</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>23</xmin>
+			<ymin>11</ymin>
+			<xmax>211</xmax>
+			<ymax>212</ymax>
+		</bndbox>
+	</object>
+</annotation>
