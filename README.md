@@ -99,7 +99,16 @@ If you managed to do it exactly like above then congrats, you are nearly done. Y
 
           sudo python train.py --logtostderr --train_dir=./models/train --pipeline_config_path=ssd_mobilenet_v1_pets.config 
 
-This will start the training process and depending on the number of steps you have selected in your 'ssd_mobilenet_v1_pets.config', it will run that many times. Default setting is 200,000 global steps. You can also visualize the training by opening a new terminal and then changing directory to 'Daisy_Train' then typing the following - 
+This will start the training process and depending on the number of steps you have selected in your 'ssd_mobilenet_v1_pets.config', it will run that many times. Default setting is 200,000 global steps.
+
+The next step is to start another eval job that will test out the training being carried out. Now the default eval.py never worked for me as the label_map path is missing. So I created a custom custom_eval_ZOD.py that has the label map categories hard coded in. You should edit this file to append the ids and names of all the things you are working on. In this case only id : 1 & name: 'Daisy'.
+
+Once this is done open a new terminal and run the following command from 'Daisy_Train' directory - 
+
+
+		sudo python custom_eval_ZOD.py --logtostderr --checkpoint_dir=models/train/ --pipeline_config_path=ssd_mobilenet_v1_pets.config --eval_dir=models/eval/
+
+This will start the eval job. Now you can visualize the trainining and eval job by opening another terminal (altogether 3 terminals now) and then changing directory to 'Daisy_Train' then typing the following - 
 
           tensorboard --logdir=models/
 
