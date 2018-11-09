@@ -1,6 +1,6 @@
 # Tensorfow Object Detection Training Demo using Daisies
 
-<img src="https://github.com/Zod20/TF-Object-Detection-Demo-Daisy/blob/master/INSTA-LEFTEYE-STEPS-5734.png?raw=true" width="300" height="300">
+<img src="https://github.com/Zod20/TF-Object-Detection-Demo-Daisy/blob/master/INSTA-LEFTEYE-STEPS-5734.png?raw=true">
 
 First make sure you install tensorflow on your system. I highly recommend spending the extra time to getting the GPU version running by installing CUDA etc. This will make your training life much easier if you have the GPU power. Install tensorflow by following the instructions here - 
 
